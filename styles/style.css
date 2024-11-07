@@ -1,0 +1,130 @@
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: var(--black-color-1);
+  color: var(--white-color-1);
+}
+:root {
+  /* Black theme */
+  --black-color-1: #2c2c2c;
+  --black-color-2: #000000;
+  --white-color-1: #fff;
+  --white-color-2:#a7a7a7;
+
+  --checked-color: #00ff88;
+  /* White theme */
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.todo__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  height: 100vh;
+}
+
+.todo__title {
+  font-size: 120px;
+  margin-bottom: 200px;
+}
+
+.input__task {
+  width: 100%;
+  padding: 15px 10px 15px 10px;
+  margin-bottom: 25px;
+  background-color: transparent;
+  border-bottom: 2px solid var(--white-color-1);
+  color: var(--white-color-1);
+}
+.input__task::placeholder {
+  font-size: 16px;
+}
+.btn__add {
+  max-width: 350px;
+  width: 100%;
+  padding: 15px 10px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid var(--white-color-1);
+  color: var(--white-color-1);
+  margin-bottom: 25px;
+}
+
+.todo__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px;
+  background-color: transparent;
+  border-radius: 16px;
+  border: 2px solid var(--white-color-1);;
+  align-items: center;
+}
+
+.todo__item {
+  padding: 15px 10px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid var(--white-color-1);
+  color: var(--white-color-1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: width .3s ease-in-out;
+  width: 100%;
+  min-height: 70px;
+}
+
+
+.todo__text{
+    font-size: 16px;
+    color: var(--white-color-1);
+}
+
+.todo__controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.todo__complete,
+.todo__remove{
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--white-color-1);
+    cursor: pointer;
+    color: var(--white-color-1);
+}
+
+.todo__complete:hover,
+.todo__remove:hover{
+    opacity: 0.8;
+}
+
+
+.checked{
+    background-color: #00ff88;
+    border: 1px solid #00ff88;
+}
+
+.text-lined{
+    text-decoration: line-through;
+}
