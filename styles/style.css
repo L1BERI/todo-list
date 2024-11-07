@@ -8,7 +8,7 @@ body {
   --black-color-1: #2c2c2c;
   --black-color-2: #000000;
   --white-color-1: #fff;
-  --white-color-2:#a7a7a7;
+  --white-color-2: #a7a7a7;
 
   --checked-color: #00ff88;
   /* White theme */
@@ -39,6 +39,7 @@ body {
 .todo__title {
   font-size: 120px;
   margin-bottom: 200px;
+  text-align: center;
 }
 
 .input__task {
@@ -71,7 +72,7 @@ body {
   padding: 25px;
   background-color: transparent;
   border-radius: 16px;
-  border: 2px solid var(--white-color-1);;
+  border: 2px solid var(--white-color-1);
   align-items: center;
 }
 
@@ -84,47 +85,68 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: width .3s ease-in-out;
+  transition: width 0.3s ease-in-out;
   width: 100%;
   min-height: 70px;
 }
 
-
-.todo__text{
-    font-size: 16px;
-    color: var(--white-color-1);
+.todo__text {
+  font-size: 16px;
+  color: var(--white-color-1);
+  max-width: 500px;
+  width: 100%;
 }
 
-.todo__controls{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+.todo__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
 .todo__complete,
-.todo__remove{
-    padding: 10px 15px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--white-color-1);
-    cursor: pointer;
-    color: var(--white-color-1);
+.todo__remove {
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--white-color-1);
+  cursor: pointer;
+  color: var(--white-color-1);
 }
 
 .todo__complete:hover,
-.todo__remove:hover{
-    opacity: 0.8;
+.todo__remove:hover {
+  opacity: 0.8;
 }
 
-
-.checked{
-    background-color: #00ff88;
-    border: 1px solid #00ff88;
+.checked {
+  background-color: #00ff88;
+  border: 1px solid #00ff88;
 }
 
-.text-lined{
-    text-decoration: line-through;
+.text-lined {
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 500px) {
+  .todo__container {
+    padding-top: 30px;
+  }
+  .todo__title {
+    font-size: 60px;
+    margin-bottom: 60px;
+  }
+  .todo__complete,
+  .todo__remove {
+    padding: 8px 13px;
+}
+.todo__item{
+    padding: 4px 8px;
+    min-height: 50px;
+}
+.todo__list{
+    padding: 15px;
+}
 }
