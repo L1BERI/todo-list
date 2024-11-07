@@ -71,12 +71,12 @@ function getTaskItem(i) {
     `;
 }
 
-// Функция для сохранения задач в localStorage
+
 function saveTasksToLocalStorage() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }
   
-  // Функция для загрузки задач из localStorage
+  
   function loadTasksFromLocalStorage() {
     const tasksFromStorage = localStorage.getItem("tasks");
     return tasksFromStorage ? JSON.parse(tasksFromStorage) : [];
