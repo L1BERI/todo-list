@@ -38,17 +38,39 @@ body {
 
 .todo__title {
   font-size: 120px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   text-align: center;
 }
 
 .input__task {
   width: 100%;
   padding: 15px 10px 15px 10px;
-  margin-bottom: 25px;
+  
   background-color: transparent;
   border-bottom: 2px solid var(--white-color-1);
   color: var(--white-color-1);
+}
+.input__label{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 25px;
+}
+.input__label::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    background: #00eeffe3;
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.input__label:focus-within::after {
+    width: 100%;
 }
 .input__task::placeholder {
   font-size: 16px;
@@ -62,15 +84,21 @@ body {
   border: 1px solid var(--white-color-1);
   color: var(--white-color-1);
   margin-bottom: 25px;
+  transition: all .3s;
 }
-
+.btn__add:hover{
+  background-color: var(--white-color-1);
+  color: var(--black-color-2);
+ 
+}
 .todo__list {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 15px;
   padding: 25px;
-  background-color: transparent;
+  background: url('./../content/background.jpg') no-repeat center;
+  background-size:cover;
   border-radius: 16px;
   border: 2px solid var(--white-color-1);
   align-items: center;
@@ -82,16 +110,30 @@ body {
   border-radius: 8px;
   border: 1px solid var(--white-color-1);
   color: var(--white-color-1);
+
+  
+  width: 100%;
+  min-height: 70px;
+  background-color: #afafaf25;
+  backdrop-filter: blur(5px);
+  transition: background-color .3s ease-in-out;
+}
+.todo__item:hover{
+  background-color: #2c2c2c;
+}
+.todo__item-wrapper{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: width 0.3s ease-in-out;
-  width: 100%;
-  min-height: 70px;
 }
-
+.todo__item-time{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+}
 .todo__text {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--white-color-1);
   max-width: 500px;
   width: 100%;
@@ -116,10 +158,13 @@ body {
   color: var(--white-color-1);
 }
 
-.todo__complete:hover,
-.todo__remove:hover {
-  opacity: 0.8;
+.todo__complete:hover{
+  background-color: #00ff88;
 }
+.todo__remove:hover{
+  background-color: crimson;
+}
+
 
 .checked {
   background-color: #00ff88;
